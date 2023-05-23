@@ -13,7 +13,7 @@ int main()
     double temperature;
     cin >> temperature;
     double WindSpeed;
-    cin >> WindSpeed;
+    cin >> WindSpeed; 
 
     double WindChill; // Declare the WindChill variable
 
