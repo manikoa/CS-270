@@ -54,4 +54,3 @@ float FitByte::getCaloriesBurned() {
 float FitByte::getMilesWalked() {
     return distance;
 }
-
