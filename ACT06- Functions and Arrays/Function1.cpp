@@ -63,4 +63,6 @@ int main()
 		printStars();
 		loopCounter++;
 	}
+	
+	return 0;
 }
