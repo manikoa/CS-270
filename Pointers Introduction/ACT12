@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // Example 1: Dynamic memory allocation
+
+    cout << "How many daily temperatures do you have? Please enter a positive integer: ";
+
+    int numTemps;
+    cin >> numTemps;
+    int* temperatures = new int[numTemps]; // Dynamically allocate memory for temperatures array
+
+    for (int i = 0; i < numTemps; i++) 
+    {
+        cout << "Enter temperature for day #" << (i + 1) << ": ";
+        cin >> temperatures[i];
+    }
+
+    // Print all array element values
+
+    cout << "All temperature values: ";
+    for (int i = 0; i < numTemps; i++) 
+    {
+        cout << temperatures[i] << " ";
+    }
+    cout << endl;
+
+    // Deallocate array memory
+
+    delete[] temperatures; // Release the dynamically allocated memory
+    temperatures = nullptr; // Set the pointer to null for good practice
+
+    // Extra exploration: Comment out the last two statements above and see if the program still works
+
+    // Example 2: Pointer variables
+
+    int N = 1;
+    int* pN = &N; // Create a pointer variable pN and assign the address of N to it
+
+    cout << "Value of N is " << N << endl;
+    cout << "Value of pointer to N is " << pN << endl;
+    cout << "Follow the pointer to access the data value " << *pN << endl;
+
+    // Change the value of N through the pointer
+
+    *pN = *pN + 1;
+    cout << "Value of N is " << N << endl;
+    cout << "Value of pointer to N is " << pN << endl;
+
+    // Extra exploration: Create a new pointer variable to point to N and change its value
+
+    int* pN2 = &N;
+    *pN2 = *pN2 + 1; // Value of N is now 3
+    cout << "Value of N is " << N << endl;
+
+    return 0;
+}
