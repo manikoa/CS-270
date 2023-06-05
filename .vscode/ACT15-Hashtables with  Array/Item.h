@@ -1,9 +1,11 @@
-/ Represents a store item by an integer SKU ID and name
+// Represents a store item by an integer SKU ID and name
+
 
 #ifndef ITEM_HDR
 #define ITEM_HDR
 
 #include <string>
+using namespace std;
 
 class Item {
     // Declare public methods/commands that form our interface seen all code
